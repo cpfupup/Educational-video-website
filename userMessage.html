@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凌云教学平台</title>
+    <link rel="stylesheet" href="css/total.css">
+    <link rel="shortcut icon" href="./img/ly.ico">
+    <script src="js/jq.min.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+
+    <!--导航栏-->
+    <header>
+        <a href="" class=""><img src="./img/ly.png" alt=""></a>
+        <ul class="allNav">
+            <a href="index.html" class="index">
+                <li>首页</li>
+            </a>
+            <a href="./videoIndex.html" id="video-study">
+                <!-- 学习模块 -->
+                <li class="my_study">
+                    <ul>
+                        我的学习
+                        <!-- 学习模块内容管理 -->
+                        <ul class="my_study_box">
+                            <a href="">
+                                <li>文章阅读</li>
+                            </a>
+                            <a href="./videoIndex.html">
+                                <li>视频学习</li>
+                            </a>
+                            <a href="">
+                                <li>学习历史</li>
+                            </a>
+                            <a href="">
+                                <li>我的收藏</li>
+                            </a>
+                            <a href="">
+                                <li>我要投稿</li>
+                            </a>
+                        </ul>
+
+
+                    </ul>
+
+                </li>
+            </a>
+            <a href="" class="downlog">
+                <li>下载app</li>
+            </a>
+            <a href="" class="live">
+                <li>直播</li>
+            </a>
+            <a href="" class="message">
+                <li>消息</li>
+            </a>
+        </ul>
+        <div class="searchLogo"></div>
+        <div class="search_box">
+            <input type="search" class="search" placeholder="搜索">
+        </div>
+
+        <div class="history_search"></div>
+
+        <!-- 头像模块 -->
+        <div class="profile_mes">
+            <a href="" id="profile"><img src="img/头像.png" alt="" class="profile"></a>
+            <ul class="profile_mes_box">
+                <a href="./userMessage.html">
+                    <li>账号管理</li>
+                </a>
+                <a href="">
+                    <li>我的钱包</li>
+                </a>
+                <a href="">
+                    <li>订单中心</li>
+                </a>
+               
+                    <li class="signOut">退出登录</li>
+              
+            </ul>
+        </div>
+        <a href="#">
+            <div class="login" id="login">登录/注册 </div>
+        </a>
+        <div class="login" id="nickname"> </div>
+    </header>
+    <!-- 登录页面 -->
+    <div class="signIn">
+        <div class="signInBox">
+            <!-- 退出界面 -->
+            <div class="signOut">x</div>
+            <a href="#">
+                <div class="phone">手机密码登录</div>
+            </a>
+            <a href="#">
+                <div class="verifi">验证码登录</div>
+            </a>
+            <!-- 手机密码登录输入 -->
+            <div class="phoneShowBox">
+                <form action="">
+                    <input type="tel" class="phoneNumber" placeholder="请输入手机号码">
+                    <input type="password" class="phoneKey" placeholder="请输入密码">
+                    <input type="submit" value="登录" class="phoneIn">
+                </form>
+                <label for="loginFree" class="loginFree"><input type="checkbox" Id="loginFree">十天内免登录</label>
+                <div class="forgetKey">忘记密码</div>
+                <div class="register">去注册></div>
+                <div class="othersLog">其他登陆方式</div>
+                <div class="qqLog"><img src="./img/QQ登录.png" alt=""></div>
+            </div>
+            <!-- 手机验证码界面 -->
+            <div class="verifiShowBox">
+                <form action="">
+                    <input type="tel" class="verifiNumber" required="required" placeholder="请输入手机号码">
+                    <input type="password" class="verifiKey" required="required" placeholder="验证码">
+                    <button class="verifiGet">获取验证码</button>
+                    <input type="submit" value="登录" class="verifiIn">
+                </form>
+                <label for="verifiloginFree" class="loginFree"><input type="checkbox"
+                        Id="verifiloginFree">十天内免登录</label>
+                <div class="forgetKey">忘记密码</div>
+                <div class="register">去注册></div>
+                <div class="othersLog">其他登陆方式</div>
+                <div class="qqLog"><img src="./img/QQ登录.png" alt=""></div>
+            </div>
+            <!-- 界面注册 -->
+            <div class="logonShowBox">
+                <div class="logon">注册</div>
+                <form action="">
+                    <input type="tel" class="logonNumber" required="required" placeholder="请输入手机号码">
+                    <input type="text" class="logonNumber" required="required" placeholder="请输入密码">
+                    <input type="text" class="logonNumber" required="required" placeholder="请再次输入密码">
+                    <input type="password" class="logonKey" required="required" placeholder="验证码">
+                    <button class="logonGet">获取验证码</button>
+                    <input type="submit" value="注册" class="logonIn">
+                </form>
+                <div class="sign-in">去登录></div>
+            </div>
+            <!-- 忘记密码 -->
+            <div class="resetKeyBox">
+                <div class="resetKey">忘记密码</div>
+                <form action="">
+                    <input type="tel" class="resetKeyNumber" placeholder="请输入手机号码">
+                    <input type="text" class="resetKeyLogonNumber" placeholder="请输入密码">
+                    <input type="text" class="resetKeyLogonNumber" placeholder="请再次输入密码">
+                    <input type="password" class="resetKey-logonKey" placeholder="验证码">
+                    <button class="resetKeylogonGet">获取验证码</button>
+                    <input type="submit" value="修改密码" class="resetKeyIn">
+                </form>
+                <div class="sign-in">去登录></div>
+            </div>
+        </div>
+    </div>
+    <div class="myMessage">
+        <h1>我的信息</h1>
+        <br>
+        <!-- 基本信息 -->
+        <h2>基本信息</h2>
+        <form action="" class="localMessage">
+            <div class="user-name">昵称:</div>
+            <input type="text" value="Nice2Cu" class="userNameChange">
+            <br clear="both">
+            <div class="user-profile">头像:</div>
+            <div class="head-p" id="touxiang">
+                <img src="./img/头像.png" alt='头像' width="100" height="100" id="avatar_img">
+            </div>
+            <div id="fromTx">
+                <input type="file" class="file" name="avatar" id="avatar">
+            </div>
+            <br clear="both">
+            <div class="cover">点击头像进行更换</div>
+            <br clear="both">
+            <div class="userSex">性别:</div>
+            <div class="sex">
+                <input type="radio" name="sex" id="boy"><label for="boy" class="boy">男</label>
+                <input type="radio" name="sex" id="girl"><label for="girl" class="girl">女</label>
+            </div>
+            <br clear="both">
+            <div class="introduce">个人介绍:</div>
+            <textarea class="introduceUser" name="" id="" cols="30" rows="10"></textarea>
+            <button class="saveLocalMessage">保存信息</button>
+        </form>
+        <!-- 详细信息 -->
+        <h2>详细信息</h2>
+        <form action="" class="allMessage">
+            <div class="userNameMessage">真实姓名:</div>
+            <input type="text" class="trueName">
+            <div class="userNumber">手机号码:</div>
+            <input type="text" class="user-number">
+            <button class="changeUserNumber">点击修改</button>
+            <button class="saveAllMessage">保存信息</button>
+
+        </form>
+
+    </div>
+    <script src="./js/index.js"></script>
+    <script>
+        $("#avatar").change(function () {
+            //拿到文件数据
+            var choose_file = $(this)[0].files[0];
+            //截取图片名称小数点后的字符串
+            var ftype = choose_file.name.substring(choose_file.name.lastIndexOf(".") + 1);
+            //校验格式是否是图片类型
+            if (ftype == "jpg" || ftype == "png" || ftype == "jpeg" || ftype == "JPG") {
+                //限制大小，照片大小不能超过1M
+                var size = choose_file.size / 1024 / 1024;
+                if (size > 1) {
+                    alert("头像不能大于1M");
+                    return false;
+                }
+                // 实例化一个阅读器对象
+                var reader = new FileReader();
+                // 读取文件的路径，没有返回值,结果在reader.result里
+                reader.readAsDataURL(choose_file);
+                // 读取需要时间，读完后再修改图片路径
+                reader.onload = function () {
+                    //回显给上方图片中
+                    $("#avatar_img").attr("src", this.result);
+                }
+            } else {
+                alert("头像格式不对，请重新选择！");
+                return false;
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

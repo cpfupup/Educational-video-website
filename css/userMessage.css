@@ -1,0 +1,169 @@
+.myMessage {
+  position: relative;
+  left: 15%;
+  width: 70%;
+  margin-top: 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.myMessage h1 {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  margin: 50px 0 0 5%;
+}
+.myMessage h2 {
+  position: relative;
+  width: 150px;
+  margin-top: 30px;
+  left: 10%;
+}
+.myMessage .localMessage {
+  position: relative;
+  width: 50%;
+  left: 16%;
+}
+.myMessage .localMessage .saveLocalMessage {
+  position: relative;
+  left: -235px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  top: 10px;
+  background-color: #fa5151;
+}
+.myMessage .localMessage .user-name {
+  float: left;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.myMessage .localMessage .userNameChange {
+  float: left;
+  margin-left: 30px;
+  height: 30px;
+  width: 200px;
+  margin-top: 20px;
+  background: none repeat scroll 0 0 #f1efef;
+  border: 1px solid #a5a4a4;
+}
+.myMessage .localMessage .user-profile {
+  float: left;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.myMessage .localMessage .file {
+  position: absolute;
+  left: 70px;
+  top: 110px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  cursor: pointer;
+}
+.myMessage .localMessage .head-p {
+  position: relative;
+  margin-top: 20px;
+  left: 70px;
+  top: -20px;
+  width: 100px;
+  height: 6.25rem;
+}
+.myMessage .localMessage .head-p img {
+  height: 100%;
+  width: 100%;
+}
+.myMessage .localMessage .cover {
+  float: left;
+  margin: 0px 0 0 65px;
+}
+.myMessage .localMessage .userSex {
+  float: left;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.myMessage .localMessage .sex {
+  float: left;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+.myMessage .localMessage .sex .boy {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.myMessage .localMessage .sex .girl {
+  margin-left: 5px;
+}
+.myMessage .localMessage .introduce {
+  position: relative;
+  left: -40px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.myMessage .localMessage .introduceUser {
+  position: relative;
+  height: 100px;
+  width: 300px;
+  left: 70px;
+  top: -20px;
+  resize: none;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  padding: 5px;
+  background: none repeat scroll 0 0 #f1efef;
+  border: 1px solid #a5a4a4;
+}
+.myMessage .allMessage {
+  position: relative;
+  width: 50%;
+  left: 16%;
+}
+.myMessage .allMessage .userNameMessage {
+  position: relative;
+  left: -40px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.myMessage .allMessage .trueName {
+  position: relative;
+  left: 70px;
+  top: -40px;
+  margin-top: 20px;
+  font-size: 18px;
+  background: none repeat scroll 0 0 #f1efef;
+  border: 1px solid #a5a4a4;
+}
+.myMessage .allMessage .userNumber {
+  position: relative;
+  left: -40px;
+  top: -15px;
+  font-size: 18px;
+}
+.myMessage .allMessage .user-number {
+  position: relative;
+  left: 70px;
+  top: -40px;
+  font-size: 18px;
+  background: none repeat scroll 0 0 #f1efef;
+  border: 1px solid #a5a4a4;
+}
+.myMessage .allMessage .changeUserNumber {
+  position: relative;
+  left: 70px;
+  top: -40px;
+  font-size: 18px;
+  color: #fa5151;
+  border-radius: 3px;
+}
+.myMessage .allMessage .saveAllMessage {
+  position: relative;
+  left: -205px;
+  top: 20px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #fa5151;
+  margin-bottom: 100px;
+}

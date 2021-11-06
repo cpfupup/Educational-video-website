@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?g0n5p0');
+    src: url('../fonts/icomoon.eot?g0n5p0#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?g0n5p0') format('truetype'),
+        url('../fonts/icomoon.woff?g0n5p0') format('woff'),
+        url('../fonts/icomoon.svg?g0n5p0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+// 播放器
+#mse {
+    float: left;
+    margin: 0 0 0 3.125rem;
+    width: 1000px;
+    height: 550px;
+}
+
+//  视频标题
+.tit {
+    margin: 1.25rem 0 0 25.625rem;
+    float: left;
+}
+
+// 作者栏
+.writer {
+    position: relative;
+    float: left;
+    height: 70px;
+    margin-left: 41.25rem;
+    margin-top: .9375rem;
+
+    .writer_pic {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+
+    .writer_name {
+        position: absolute;
+        float: left;
+        font-size: 1.125rem;
+        top: 10px;
+        width: 3.125rem;
+        height: 3.125rem;
+        margin-left: 50px;
+        color: #f17373;
+
+    }
+
+    .writer_send {
+        position: absolute;
+        float: left;
+        font-size: .9375rem;
+        top: .625rem;
+        width: 6.25rem;
+        height: 3.125rem;
+        margin-left: 7.375rem;
+
+    }
+
+    .writer_send::before {
+        margin-right: .3125rem;
+        content: "\e96c";
+        font-family: 'icomoon';
+        font-size: 1.125rem;
+    }
+
+    button {
+        width: 50px;
+        position: absolute;
+        left: 240px;
+        top: 17px;
+        font-size: .9375rem;
+        border-radius: 5px;
+        background-color: #f17373;
+        color: rgb(12, 12, 12);
+    }
+}
+
+// 视频选集
+.video_choice {
+    float: left;
+    background-color: rgb(167, 164, 164);
+    width: 25rem;
+    height: 3rem;
+    margin: 0 0 0 .875rem;
+    font-size: 1.25rem;
+    font-weight: 1000;
+    text-align: center;
+    line-height: 3rem;
+    color: rgb(73, 73, 73);
+    border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.choice {
+    float: left;
+    width: 25rem;
+    height: 34.375rem;
+    border: rgb(163, 162, 162).125rem solid;
+    background-color: rgb(240, 239, 239);
+    margin: 0 0 0 .875rem;
+    font-size: .9375rem;
+    overflow: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    // 单元头
+    .unit {
+        position: relative;
+        height: 50px;
+        font-size: 1.25rem;
+        font-weight: 1000;
+        background-color: rgb(209, 209, 209);
+
+        .uni {
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            padding-left: 27px;
+            line-height: 3.125rem;
+            border-right: #666 1px solid;
+            font-size: 20px;
+        }
+
+        .unit_number {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 85px;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            text-align: center;
+            background: #fff;
+            border: 1px solid rgb(110, 109, 109);
+        }
+
+        .unit_name {
+            position: absolute;
+            height: 50px;
+            top: 0px;
+            padding-left: 20px;
+            line-height: 3.125rem;
+
+        }
+
+    }
+
+    .unitClass {
+        position: relative;
+        height: 40px;
+        left: 0px;
+        font-size: 1.25rem;
+        font-weight: 800;
+        font-size: 1.125rem;
+        cursor: pointer;
+        .Cla {
+            float: left;
+            width: 100px;
+            padding-left: 27px;
+            line-height: 40px;
+            border-right: rgb(54, 53, 53) 1px solid;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .Class_number {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 90px;
+            height: 1.125rem;
+            width: 1.125rem;
+            border-radius: 50%;
+            text-align: center;
+            background: #fff;
+            border: 1px solid rgb(110, 109, 109);
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .Class_name {
+            position:absolute;
+            top: 0;
+            height: 50px;
+            width: 100px;
+            font-size: 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 20px;
+            line-height: 36px;
+            cursor: pointer;
+        }
+    }
+
+    a {
+        margin-left: .3125rem;
+        display: block;
+    }
+}
+
+.unitClass:hover {
+    background-color: rgb(95, 87, 102);
+    color: #fff;
+
+    .Class_number {
+        color: black;
+    }
+}
+
+// 视频简介及点赞转发收藏
+.syno {
+    float: left;
+    width: 62.5rem;
+    margin: .9375rem 0 0 3.125rem;
+
+    a {
+        :hover {
+            color: #666;
+        }
+
+    }
+
+    .like {
+        float: left;
+        width: 100px;
+        height: 20px;
+        font-size: 20px;
+
+    }
+
+    .like::before {
+        margin-right: .3125rem;
+        content: "\e90a";
+        font-family: 'icomoon';
+    }
+
+    .collection {
+        float: left;
+        width: 100px;
+        height: 20px;
+        font-size: 20px;
+
+    }
+
+    .collection::before {
+        margin-right: .3125rem;
+        content: "\e906";
+        font-family: 'icomoon';
+    }
+
+    .transmit {
+        float: left;
+        width: 100x;
+        height: 20px;
+        font-size: 20px;
+    }
+
+    .transmit::before {
+        margin-right: .3125rem;
+        content: "\e968";
+        font-family: 'icomoon';
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        margin-top: .9375rem;
+    }
+
+    .synopsis {
+        font-size: 1.125rem;
+        margin-top: .9375rem;
+    }
+}
+
+// 评论区
+.discuss {
+    float: left;
+    height: 500px;
+    width: 1500px;
+    margin: 1.875rem 0 0 3.125rem;
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    .discuss_pic {
+        float: left;
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: 4.875rem 0 0 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+    }
+
+    input {
+        margin: 3.875rem 0 0 2rem;
+        float: left;
+        width: 45rem;
+        height: 6.25rem;
+        border-radius: .3125rem;
+        background-color: rgb(241, 239, 240);
+    }
+
+    button {
+        float: left;
+        height: 6.25rem;
+        width: 6.25rem;
+        border-radius: .3125rem;
+        margin: 3.875rem 0 0 2rem;
+        background-color: rgb(152, 179, 253);
+    }
+}

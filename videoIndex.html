@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凌云教学平台</title>
+    <link rel="stylesheet" href="css/total.css">
+    
+    <link rel="shortcut icon" href="./img/ly.ico">
+    <script src="js/jq.min.js"></script>
+
+    <!-- 轮播图css -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <!--导航栏-->
+  <!--导航栏-->
+  <header>
+    <a href="" class=""><img src="./img/ly.png" alt=""></a>
+    <ul class="allNav">
+        <a href="index.html" class="index">
+            <li>首页</li>
+        </a>
+        <a href="./videoIndex.html" id="video-study">
+            <!-- 学习模块 -->
+            <li class="my_study">
+                <ul>
+                    我的学习
+                    <!-- 学习模块内容管理 -->
+                    <ul class="my_study_box">
+                        <a href="">
+                            <li>文章阅读</li>
+                        </a>
+                        <a href="./videoIndex.html">
+                            <li>视频学习</li>
+                        </a>
+                        <a href="">
+                            <li>学习历史</li>
+                        </a>
+                        <a href="">
+                            <li>我的收藏</li>
+                        </a>
+                        <a href="">
+                            <li>我要投稿</li>
+                        </a>
+                    </ul>
+
+
+                </ul>
+
+            </li>
+        </a>
+        <a href="" class="downlog">
+            <li>下载app</li>
+        </a>
+        <a href="" class="live">
+            <li>直播</li>
+        </a>
+        <a href="" class="message">
+            <li>消息</li>
+        </a>
+    </ul>
+    <div class="searchLogo"></div>
+    <div class="search_box">
+        <input type="search" class="search" placeholder="搜索">
+    </div>
+
+    <div class="history_search"></div>
+
+    <!-- 头像模块 -->
+    <div class="profile_mes">
+        <a href="" id="profile"><img src="img/头像.png" alt="" class="profile"></a>
+        <ul class="profile_mes_box">
+            <a href="./userMessage.html">
+                <li>账号管理</li>
+            </a>
+            <a href="">
+                <li>我的钱包</li>
+            </a>
+            <a href="">
+                <li>订单中心</li>
+            </a>
+           
+                <li class="signOut" style="cursor: pointer;">退出登录</li>
+          
+        </ul>
+    </div>
+    <a href="#">
+        <div class="login" id="login">登录/注册 </div>
+    </a>
+    <div class="login" id="nickname"> </div>
+</header>
+
+    <!-- 登录页面 -->
+    <div class="signIn">
+        <div class="signInBox">
+            <!-- 退出界面 -->
+            <div class="signOut">x</div>
+            <a href="#"></a>
+            <div class="phone">账号密码登录</div>
+            </a>
+            <!-- 账号密码登录输入 -->
+            <div class="phoneShowBox">
+                <input type="tel" class="phoneNumber" placeholder="请输入账号" required>
+                <input type="password" class="phoneKey" placeholder="请输入密码" required>
+                <input type="submit" value="登录" class="phoneIn" id="phoneIn">
+                <label for="loginFree" class="loginFree"><input type="checkbox" Id="loginFree">十天内免登录</label>
+                </input>
+            </div>
+        </div>
+    </div>
+    <!-- 视频内容 -->
+    <div class="videoChoice">
+        <div class="allClass">全部课程</div>
+        <div class="classWay">学习路径</div>
+    </div>
+    <div class="videoAll">
+        <div class="videoBox">
+            <div class="videoTag">
+                <div class="tag1">课程:</div>
+                <ul class="videoTag1" id="videoTag1">
+                    <!-- li标签插入点 -->
+                </ul>
+                <br style="clear: both">
+                <div class="tag2">标签:</div>
+                <ul class="videoTag2" id="videoTag2">
+                    <!-- li标签插入点 -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="videoStartStudy">
+            <!-- 课程视频 -->
+            <div class="videoStudyBox">
+                <!-- 课程品类 -->
+                <div class="videoHotClass">
+                    <!-- 宣传标签 -->
+                    <h1 class="videoHotClassName">linux基础入门 |</h1>
+                    <div class="videOHotSecondClassName">及时跟上时代</div>
+                    <ul class="videoClassVideo" id="videoClassVideo">
+                        <!-- 插入视频处 -->
+                    </ul>
+                </div>
+                <!-- 选页 -->
+                <ul class="videoPage" id="videoPage">
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 学习途径 -->
+    <div class="videoWay">
+        <!-- 背景 -->
+        <div class="videoWayBackGround">
+            <h1>业精于勤，荒于嬉；行成于思，毁于随</h1>
+        </div>
+        <div class="videoWayStartStudy">
+            <div class="videoWayStudyBox">
+                <div class="videoWayHotClass">
+                    <ul class="videoWayClassVideo" id="videoWayClassVideo">
+                        <!-- 学习路线li标签处 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+    <script src="./js/videoIndex.js"></script>
+    <script src="./js/template-web.js"></script>
+    <!-- 一级标签 -->
+    <script type="text/html" id="taskTpl">
+               {{each tasks}}
+                <li parentsid={{$value.id}} >{{$value.title}}</li>
+                {{/each}}    
+    </script>
+    <!-- 二级标签 -->
+    <script type="text/html" id="ary2Tpl">
+                {{each tasks}}
+                <li id={{$value.id}}>{{$value.title}}</li>
+                {{/each}}
+    </script>
+    <!-- 视频封面 -->
+    <script type="text/html" id="classVideoTpl">
+                {{each tasks}}
+                <li id={{$value.id}} value={{$value.title}} class="video-show">
+                    <a href="./video.html" >
+                        <div>
+                            <div class="classVideoPic"><img src={{$value.cover}} alt=""></div>
+                            <div class="mask">开始学习</div>
+                            <div class="classInterduce"  >{{$value.title}}</div>
+                            <div class="teacher">授课老师：{{$value.teacherName}}</div>
+                            <div class="creatTime">创建时间：{{$value.gmtCreate}}</div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+    </script>
+    <!-- 视频页数 -->
+    <script type="text/html" id="videoPageTpl">
+        {{each pages}}
+                <li id="{{$value}}">{{$value}}</li>
+
+            {{/each}}
+    </script>
+    <!-- 学习路线封面 -->
+    <script type="text/html" id="videoWayClassVideoTpl">
+    {{each tasks}}
+    <li id={{$value.id}}>
+        <a href="./video.html">
+            <div>
+                <div class="classVideoPic"><img src={{$value.cover}} alt=""></div>
+                <div class="classInterduce" value={{$value.title}}>{{$value.title}}</div>
+            </div>
+        </a>
+
+    </li>
+    {{/each}}
+    </script>
+
+</body>
+
+</html>

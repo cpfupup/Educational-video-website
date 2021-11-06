@@ -1,0 +1,3062 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?75c6c3');
+    src: url('../fonts/icomoon.eot?75c6c3#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?75c6c3') format('truetype'),
+        url('../fonts/icomoon.woff?75c6c3') format('woff'),
+        url('../fonts/icomoon.svg?75c6c3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+body {
+    max-width: 1680px;
+    min-width: 768px;
+}
+
+@media (max-width: 768px) {
+    header {
+        background-color: #fff;
+        height: 55px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        img {
+            margin-left: 5%;
+            width: 10%;
+            float: left;
+            height: 2.5rem;
+        }
+
+        ul {
+            li {
+                float: left;
+                width: 6%;
+                height: 3.125rem;
+                font-size: 10px;
+                text-align: center;
+                line-height: 3.125rem;
+
+            }
+
+            a {
+                :hover {
+                    color: rgba(0, 120, 238, 28);
+                }
+            }
+        }
+
+        //    搜索框样式
+        .search_box {
+            float: left;
+            margin-top: 15px;
+            margin-left: 2%;
+            width: 15%;
+
+            .search {
+                float: left;
+                position: relative;
+                height: 1.5rem;
+                width: 100%;
+                left: 20%;
+                top: 0px;
+                border-radius: 5px;
+                background-color: rgb(207, 204, 204);
+                text-indent: 40px;
+            }
+        }
+
+        .searchLogo {
+            position: relative;
+            float: left;
+            top: 16px;
+            left: 35px;
+
+        }
+
+        .searchLogo::before {
+            content: "\e905";
+            font-family: 'icomoon';
+            color: #000;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        .history_search {
+            position: absolute;
+            z-index: 9999;
+            top: 45px;
+            left: 52%;
+            display: none;
+            width: 15%;
+            height: 150px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+
+
+        //登录注册
+        .login {
+            float: left;
+            width: 8%;
+            height: 3.125rem;
+            font-size: 10px;
+            text-align: center;
+            margin-top: .225rem;
+            margin-left: 2%;
+            line-height: 3.125rem;
+        }
+
+        //我的学习
+        .my_study {
+            position: relative;
+            z-index: 2;
+
+            ul {
+                .my_study_box {
+                    float: left;
+                    display: none;
+                    height: 250px;
+                    width: 120%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    background-color: #fff;
+                    font-size: 10px;
+
+                    li {
+                        width: 100%;
+                    }
+                }
+
+                .my_study_box a:hover {
+                    background-color: rgb(238, 238, 238);
+                }
+            }
+        }
+
+        .profile_mes {
+            float: left;
+            width: 80px;
+            margin-left: 2.375rem;
+            height: 3.4375rem;
+
+            // 头像样式
+            .profile {
+                float: left;
+                margin-top: .625rem;
+                margin-left: 1.2rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .profile_mes_box {
+                position: relative;
+                z-index: 2;
+                float: left;
+                display: none;
+                width: 100%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                background-color: #fff;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            .profile_mes_box li:hover {
+                background-color: rgb(238, 238, 238);
+            }
+        }
+    }
+
+    //黑色背景
+    .signIn {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: cross-slide-y pinch-zoom double-tap-zoom;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        // 退出
+
+        //登录注册界面
+        .signInBox {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: .3125rem;
+            background-color: #fff;
+            margin-left: 50%;
+            left: -250px;
+            margin-top: 100px;
+
+            //退出
+            .signOut {
+                float: right;
+                height: 50px;
+                width: 50px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+
+
+
+
+            //手机密码登录界面
+            .phoneShowBox {
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .phoneNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneKey {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneIn {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            //验证码登录界面
+            .verifiShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .verifiNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .verifiIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            // 注册界面
+            .logonShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .resetKeyBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .resetKeyNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeyLogonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKey-logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeylogonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+    }
+
+    // 轮播图
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
+
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .start {
+        text-align: center;
+        margin-top: 10px;
+        color: rgb(252, 132, 34);
+        cursor: pointer;
+    }
+
+    .startStudy {
+        overflow: hidden;
+        height: 1000px;
+        width: 100%;
+
+        .studyBox {
+            height: 100%;
+            width: 85%;
+            margin: 50px auto 0 auto;
+            vertical-align: middle;
+            border-radius: 5px;
+
+            .hotClass {
+                padding: 20px 0 0 10px;
+
+                .hotClassName {
+                    display: inline-block;
+                }
+
+                .hotSecondClassName {
+                    display: inline-block;
+                }
+            }
+
+            .classVideo {
+                width: 100%;
+
+                li {
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 40px;
+                    width: 40%;
+                    height: 250px;
+                    background-color: #fff;
+                    .mask {
+                        display: none;
+                        // overflow: hidden;
+                        position: absolute;
+                        top: 30px;
+                        height: 270px;
+                        width: 20%;
+                        background: rgba(0, 0, 0, 0.7) no-repeat center !important;
+                        text-align: center;
+                        line-height: 200px;
+                        color: white;
+                        font-size: 25px;
+                        border-radius: 5px;
+                    }
+                    .classVideoPic {
+                        height: 40%;
+                        width: 100%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .mask {
+                        display: none;
+                        // overflow: hidden;
+                        position: absolute;
+                        top: 30px;
+                        height: 270px;
+                        width: 20%;
+                        background: rgba(0, 0, 0, 0.7) no-repeat center !important;
+                        text-align: center;
+                        line-height: 200px;
+                        color: white;
+                        font-size: 25px;
+                        border-radius: 5px;
+                      }
+
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    header {
+        background-color: #fff;
+        height: 55px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        img {
+            margin-left: 5%;
+            width: 10%;
+            float: left;
+            height: 2.5rem;
+        }
+
+        ul {
+            li {
+                float: left;
+                width: 6%;
+                height: 3.125rem;
+                font-size: 10px;
+                text-align: center;
+                line-height: 3.125rem;
+
+            }
+
+            a {
+                :hover {
+                    color: rgba(0, 120, 238, 28);
+                }
+            }
+        }
+
+        //    搜索框样式
+        .search_box {
+            float: left;
+            margin-top: 15px;
+            margin-left: 2%;
+            width: 15%;
+
+            .search {
+                float: left;
+                position: relative;
+                height: 1.5rem;
+                width: 100%;
+                left: 20%;
+                top: 0px;
+                border-radius: 5px;
+                background-color: rgb(207, 204, 204);
+                text-indent: 40px;
+            }
+        }
+
+        .searchLogo {
+            position: relative;
+            float: left;
+            top: 16px;
+            left: 35px;
+
+        }
+
+        .searchLogo::before {
+            content: "\e905";
+            font-family: 'icomoon';
+            color: #000;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        .history_search {
+            position: absolute;
+            z-index: 9999;
+            top: 45px;
+            left: 52%;
+            display: none;
+            width: 15%;
+            height: 150px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+
+
+        //登录注册
+        .login {
+            float: left;
+            width: 8%;
+            height: 3.125rem;
+            font-size: 10px;
+            text-align: center;
+            margin-top: .225rem;
+            margin-left: 2%;
+            line-height: 3.125rem;
+        }
+
+        //我的学习
+        .my_study {
+            position: relative;
+            z-index: 2;
+
+            ul {
+                .my_study_box {
+                    float: left;
+                    display: none;
+                    height: 250px;
+                    width: 120%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    background-color: #fff;
+                    font-size: 10px;
+
+                    li {
+                        width: 100%;
+                    }
+                }
+
+                .my_study_box a:hover {
+                    background-color: rgb(238, 238, 238);
+                }
+            }
+        }
+
+        .profile_mes {
+            float: left;
+            width: 80px;
+            margin-left: 2.375rem;
+            height: 3.4375rem;
+
+            // 头像样式
+            .profile {
+                float: left;
+                margin-top: .625rem;
+                margin-left: 1.2rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .profile_mes_box {
+                position: relative;
+                z-index: 2;
+                float: left;
+                display: none;
+                width: 100%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                background-color: #fff;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            .profile_mes_box li:hover {
+                background-color: rgb(238, 238, 238);
+            }
+        }
+    }
+
+    //黑色背景
+    .signIn {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: cross-slide-y pinch-zoom double-tap-zoom;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        // 退出
+
+        //登录注册界面
+        .signInBox {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: .3125rem;
+            background-color: #fff;
+            margin-left: 50%;
+            left: -250px;
+            margin-top: 100px;
+
+            //退出
+            .signOut {
+                float: right;
+                height: 50px;
+                width: 50px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+
+
+            .verifi {
+                float: left;
+                height: 50px;
+                width: 200px;
+                margin-top: 1.875rem;
+                text-align: center;
+                line-height: 3.125rem;
+                font-size: 25px;
+            }
+
+            //手机密码登录界面
+            .phoneShowBox {
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .phoneNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneKey {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneIn {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            //验证码登录界面
+            .verifiShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .verifiNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .verifiIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            // 注册界面
+            .logonShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .resetKeyBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .resetKeyNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeyLogonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKey-logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeylogonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+    }
+
+    // 轮播图
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
+
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .start {
+        text-align: center;
+        margin-top: 10px;
+        color: rgb(252, 132, 34);
+        cursor: pointer;
+    }
+
+    .startStudy {
+        overflow: hidden;
+        height: 1000px;
+        width: 100%;
+
+        .studyBox {
+            height: 100%;
+            width: 85%;
+            margin: 50px auto 0 auto;
+            vertical-align: middle;
+            border-radius: 5px;
+
+            .hotClass {
+                padding: 20px 0 0 10px;
+
+                .hotClassName {
+                    display: inline-block;
+                }
+
+                .hotSecondClassName {
+                    display: inline-block;
+                }
+            }
+
+            .classVideo {
+                width: 100%;
+
+                li {
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 40px;
+                    width: 40%;
+                    height: 250px;
+                    background-color: #fff;
+
+                    .mask {
+                        display: none;
+                        // overflow: hidden;
+                        position: absolute;
+                        top: 30px;
+                        height: 270px;
+                        width: 20%;
+                        background: rgba(0, 0, 0, 0.7) no-repeat center !important;
+                        text-align: center;
+                        line-height: 200px;
+                        color: white;
+                        font-size: 25px;
+                        border-radius: 5px;
+                    }
+                    .classVideoPic {
+                        height: 40%;
+                        width: 100%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+//>=768的设备 }
+
+@media (min-width: 992px) {
+    header {
+        background-color: #fff;
+        height: 55px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        img {
+            margin-left: 5%;
+            width: 8%;
+            float: left;
+            height: 2.5rem;
+        }
+
+        ul {
+            li {
+                float: left;
+                width: 5%;
+                height: 3.125rem;
+                font-size: 12px;
+                text-align: center;
+                line-height: 3.125rem;
+
+            }
+
+            a {
+                :hover {
+                    color: rgba(0, 120, 238, 28);
+                }
+            }
+        }
+
+        //    搜索框样式
+        .search_box {
+            display: inline;
+            float: left;
+            margin-top: 15px;
+            margin-left: 2%;
+            width: 20%;
+
+            .search {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                height: 1.5rem;
+                width: 100%;
+                border-radius: 5px;
+                background-color: rgb(207, 204, 204);
+                text-indent: 10px;
+            }
+        }
+
+        .search_box::before {
+            display: none;
+            content: "\e905";
+            font-family: 'icomoon';
+            color: #000;
+            background-color: rgb(207, 204, 204);
+            z-index: 5;
+        }
+
+        .history_search {
+            position: absolute;
+            z-index: 9999;
+            top: 45px;
+            left: 41.5%;
+            display: none;
+            width: 20%;
+            height: 150px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .searchLogo {
+            position: relative;
+            float: left;
+            top: 16px;
+            left: 15px;
+
+        }
+
+
+
+        //登录注册
+        .login {
+            float: left;
+            width: 5%;
+            height: 3.125rem;
+            font-size: 10px;
+            text-align: center;
+            margin-top: .225rem;
+            margin-left: 2%;
+            line-height: 3.125rem;
+        }
+
+        //我的学习
+        .my_study {
+            position: relative;
+            z-index: 2;
+
+            ul {
+                .my_study_box {
+                    float: left;
+                    display: none;
+                    height: 250px;
+                    width: 120%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    background-color: #fff;
+                    font-size: 10px;
+
+                    li {
+                        width: 100%;
+                    }
+                }
+
+                .my_study_box a:hover {
+                    background-color: rgb(238, 238, 238);
+                }
+            }
+        }
+
+        .profile_mes {
+            float: left;
+            width: 80px;
+            margin-left: 2.375rem;
+            height: 3.4375rem;
+
+            // 头像样式
+            .profile {
+                float: left;
+                margin-top: .625rem;
+                margin-left: 1.2rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .profile_mes_box {
+                position: relative;
+                z-index: 2;
+                float: left;
+                display: none;
+                width: 100%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                background-color: #fff;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            .profile_mes_box li:hover {
+                background-color: rgb(238, 238, 238);
+            }
+        }
+    }
+
+    //黑色背景
+    .signIn {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: cross-slide-y pinch-zoom double-tap-zoom;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        // 退出
+
+        //登录注册界面
+        .signInBox {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: .3125rem;
+            background-color: #fff;
+            margin-left: 50%;
+            left: -250px;
+            margin-top: 100px;
+
+            //退出
+            .signOut {
+                float: right;
+                height: 50px;
+                width: 50px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+
+            .verifi {
+                float: left;
+                height: 50px;
+                width: 200px;
+                margin-top: 1.875rem;
+                text-align: center;
+                line-height: 3.125rem;
+                font-size: 25px;
+            }
+
+            //手机密码登录界面
+            .phoneShowBox {
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .phoneNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneKey {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneIn {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            //验证码登录界面
+            .verifiShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .verifiNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .verifiIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            // 注册界面
+            .logonShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .resetKeyBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .resetKeyNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeyLogonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKey-logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeylogonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+    }
+
+    // 轮播图
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
+
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .start {
+        text-align: center;
+        margin-top: 10px;
+        color: rgb(252, 132, 34);
+        cursor: pointer;
+    }
+
+    .startStudy {
+        overflow: hidden;
+        height: 1000px;
+        width: 100%;
+
+        .studyBox {
+            height: 100%;
+            width: 85%;
+            margin: 50px auto 0 auto;
+            vertical-align: middle;
+            border-radius: 5px;
+
+            .hotClass {
+                padding: 20px 0 0 10px;
+
+                .hotClassName {
+                    display: inline-block;
+                }
+
+                .hotSecondClassName {
+                    display: inline-block;
+                }
+            }
+
+            .classVideo {
+                width: 100%;
+                height: 300px;
+
+                li {
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 30px;
+                    width: 20%;
+                    height: 170px;
+                    background-color: #fff;
+                    .mask {
+                        display: none;
+                        // overflow: hidden;
+                        position: absolute;
+                        top: 30px;
+                        height: 270px;
+                        width: 20%;
+                        background: rgba(0, 0, 0, 0.7) no-repeat center !important;
+                        text-align: center;
+                        line-height: 200px;
+                        color: white;
+                        font-size: 25px;
+                        border-radius: 5px;
+                    }
+                    .classVideoPic {
+                        height: 60%;
+                        width: 100%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    ;
+                }
+            }
+        }
+    }
+}
+
+//>=992的设备 }
+
+@media (min-width: 1200px) {
+    header {
+        background-color: #fff;
+        height: 55px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        img {
+            margin-left: 5%;
+            width: 8%;
+            float: left;
+            height: 2.5rem;
+        }
+
+        ul {
+            li {
+                float: left;
+                width: 6%;
+                height: 3.125rem;
+                font-size: 15px;
+                text-align: center;
+                line-height: 3.125rem;
+
+            }
+
+            a {
+                :hover {
+                    color: rgba(0, 120, 238, 28);
+                }
+            }
+        }
+
+        //    搜索框样式
+        .search_box {
+            float: left;
+            display: inline;
+            margin-top: 15px;
+            margin-left: 2%;
+            width: 20%;
+
+            .search {
+
+                height: 1.5rem;
+                width: 100%;
+                border-radius: 5px;
+                background-color: rgb(207, 204, 204);
+                text-indent: 10px;
+            }
+        }
+
+        .history_search {
+            position: absolute;
+            z-index: 9999;
+            top: 45px;
+            left: 46%;
+            display: none;
+            width: 20%;
+            height: 150px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+
+
+        //登录注册
+        .login {
+            float: left;
+            width: 8%;
+            height: 3.125rem;
+            font-size: 16px;
+            text-align: center;
+            margin-top: .225rem;
+            margin-left: 2%;
+            line-height: 3.125rem;
+        }
+
+        //我的学习
+        .my_study {
+            position: relative;
+            z-index: 2;
+
+            ul {
+                .my_study_box {
+                    float: left;
+                    display: none;
+                    height: 250px;
+                    width: 120%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    background-color: #fff;
+                    font-size: 16px;
+
+                    li {
+                        width: 100%;
+                    }
+                }
+
+                .my_study_box a:hover {
+                    background-color: rgb(238, 238, 238);
+                }
+            }
+        }
+
+        .profile_mes {
+            float: left;
+            width: 80px;
+            margin-left: 2.375rem;
+            height: 3.4375rem;
+
+            // 头像样式
+            .profile {
+                float: left;
+                margin-top: .625rem;
+                margin-left: 1.2rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .profile_mes_box {
+                position: relative;
+                z-index: 2;
+                float: left;
+                display: none;
+                width: 100%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                background-color: #fff;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            .profile_mes_box li:hover {
+                background-color: rgb(238, 238, 238);
+            }
+        }
+    }
+
+    //黑色背景
+    .signIn {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: cross-slide-y pinch-zoom double-tap-zoom;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        // 退出
+
+        //登录注册界面
+        .signInBox {
+            position: absolute;
+            width: 500px;
+            height: 450px;
+            border-radius: .3125rem;
+            background-color: #fff;
+            margin-left: 50%;
+            left: -250px;
+            margin-top: 100px;
+
+            //退出
+            .signOut {
+                float: right;
+                height: 50px;
+                width: 50px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .phone {
+
+                height: 3.125rem;
+                width: 200px;
+                margin-top: 1.875rem;
+                margin-left: 9.125rem;
+                text-align: center;
+                line-height: 3.125rem;
+                font-size: 25px;
+
+            }
+
+            .verifi {
+                float: left;
+                height: 50px;
+                width: 200px;
+                margin-top: 1.875rem;
+                text-align: center;
+                line-height: 3.125rem;
+                font-size: 25px;
+            }
+
+            //手机密码登录界面
+            .phoneShowBox {
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .phoneNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneKey {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .phoneIn {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            //验证码登录界面
+            .verifiShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .verifiNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .verifiGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .verifiIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //注册
+                .register {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+                //其他登陆方式
+                .othersLog {
+                    position: absolute;
+                    top: 400px;
+                }
+
+                //qq登录
+                .qqLog {
+                    position: absolute;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: blue;
+                    top: 390px;
+                    left: 225px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            // 注册界面
+            .logonShowBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .logonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+
+            .resetKeyBox {
+                display: none;
+                float: left;
+                width: 400px;
+                height: 400px;
+                margin-left: 3.125rem;
+
+                .resetKey {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .logon {
+                    float: left;
+                    font-size: 25px;
+                    margin: 10px 0 15px 0;
+                }
+
+                .resetKeyNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeyLogonNumber {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKey-logonKey {
+
+                    float: left;
+                    width: 60%;
+                    height: 50px;
+                    margin-top: 30px;
+                    border: 2px solid rgb(224, 221, 221);
+                    border-radius: 2px;
+                    text-indent: 10px;
+                }
+
+                .resetKeylogonGet {
+
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    width: 35%;
+                    height: 50px;
+                    background-color: rgb(255, 118, 118);
+                    border-radius: 3px;
+                }
+
+                .logonIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                    text-indent: 10px;
+                }
+
+                .resetKeyIn {
+                    float: left;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 30px;
+                    background-color: rgb(255, 118, 118);
+                    cursor: pointer;
+                }
+
+                .loginFree {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    text-align: left;
+                    border-right: 2px solid rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                .loginFree:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //忘记密码
+                .forgetKey {
+                    float: left;
+                    width: 100px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+                .forgetKey:hover {
+                    color: rgb(0, 0, 0);
+                }
+
+                //登录
+                .sign-in {
+                    float: right;
+                    margin-top: 20px;
+                    color: rgb(245, 56, 56);
+                    cursor: pointer;
+                }
+
+
+            }
+        }
+    }
+
+    // 轮播图
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
+
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .start {
+        text-align: center;
+        margin-top: 10px;
+        color: rgb(252, 132, 34);
+        cursor: pointer;
+    }
+
+    .startStudy {
+        overflow: hidden;
+        height: 1000px;
+        width: 100%;
+
+        .studyBox {
+            height: 100%;
+            width: 85%;
+            margin: 50px auto 0 auto;
+            vertical-align: middle;
+            border-radius: 5px;
+
+            .hotClass {
+                padding: 20px 0 0 10px;
+
+                .hotClassName {
+                    display: inline-block;
+                }
+
+                .hotSecondClassName {
+                    display: inline-block;
+                }
+            }
+
+            .classVideo {
+                position: relative;
+                width: 100%;
+                height: 500px;
+                overflow: visible;
+                
+                
+                .mask::before{
+                    content: "\ea15";
+                    font-family: 'icomoon';
+                    margin-right: 10px;
+                }
+                .video-show {
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 30px;
+                    // overflow: hidden;
+                    border-radius: 5px;
+                    width: 20%;
+                    height: 270px;
+                    background-color: #fff;
+
+                    .mask {
+                        white-space:normal;
+                        display: inline;
+                        // overflow: hidden;
+                        position: absolute;
+                        float: left;
+                        top: 30px;
+                        height: 270px;
+                        width: 20%;
+                        
+                        background: rgba(0, 0, 0, 0.7) ;
+                        text-align: center;
+                        line-height: 200px;
+                        color: white;
+                        font-size: 25px;
+                        border-radius: 5px;
+                    }
+
+                    .classVideoPic {
+                        height: 160px;
+                        width: 100%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    .classInterduce {
+                        margin-top: 3px;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+
+                    .teacher {
+                        margin-top: 15px;
+                        float: left;
+                        margin-left: 5px;
+                    }
+
+                    .creatTime {
+                        margin-top: 5px;
+                        float: left;
+                        margin-left: 5px;
+                        padding-bottom: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+//>=1200的设备 }
+/*放置位置的css*/

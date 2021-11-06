@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>视频观看</title>
+    <link rel="stylesheet" href="css/total.css">
+    <link rel="shortcut icon" href="./img/ly.ico">
+    <script src="js/jq.min.js"></script>
+   <script src="js/index.js"></script>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!--导航栏-->
+    <header>
+        <a href="" class=""><img src="./img/ly.png" alt=""></a>
+        <ul class="allNav">
+            <a href="index.html" class="index">
+                <li>首页</li>
+            </a>
+            <a href="./videoIndex.html" id="video-study">
+                <!-- 学习模块 -->
+                <li class="my_study" style="z-index: 999;">
+                    <ul>
+                        我的学习
+                        <!-- 学习模块内容管理 -->
+                        <ul class="my_study_box">
+                            <a href="">
+                                <li>文章阅读</li>
+                            </a>
+                            <a href="./videoIndex.html">
+                                <li>视频学习</li>
+                            </a>
+                            <a href="">
+                                <li>学习历史</li>
+                            </a>
+                            <a href="">
+                                <li>我的收藏</li>
+                            </a>
+                            <a href="">
+                                <li>我要投稿</li>
+                            </a>
+                        </ul>
+
+
+                    </ul>
+
+                </li>
+            </a>
+            <a href="" class="downlog">
+                <li>下载app</li>
+            </a>
+            <a href="" class="live">
+                <li>直播</li>
+            </a>
+            <a href="" class="message">
+                <li>消息</li>
+            </a>
+        </ul>
+        <div class="searchLogo"></div>
+        <div class="search_box">
+            <input type="search" class="search" placeholder="搜索">
+        </div>
+
+        <div class="history_search"></div>
+
+        <!-- 头像模块 -->
+        <div class="profile_mes">
+            <a href="" id="profile"><img src="img/头像.png" alt="" class="profile"></a>
+            <ul class="profile_mes_box" style="z-index: 999;">
+                <a href="./userMessage.html">
+                    <li>账号管理</li>
+                </a>
+                <a href="">
+                    <li>我的钱包</li>
+                </a>
+                <a href="">
+                    <li>订单中心</li>
+                </a>
+               
+                    <li class="signOut" style="cursor: pointer;">退出登录</li>
+              
+            </ul>
+        </div>
+        <a href="#">
+            <div class="login" id="login">登录/注册 </div>
+        </a>
+        <div class="login" id="nickname"> </div>
+    </header>
+    <!-- 登录页面 -->
+     <div class="signIn">
+        <div class="signInBox">
+            <!-- 退出界面 -->
+            <div class="signOut">x</div>
+            <a href="#"></a>
+            <div class="phone">账号密码登录</div>
+            </a>
+            <!-- 账号密码登录输入 -->
+            <div class="phoneShowBox">
+                <input type="tel" class="phoneNumber" placeholder="请输入账号" required>
+                <input type="password" class="phoneKey" placeholder="请输入密码" required>
+                <input type="submit" value="登录" class="phoneIn" id="phoneIn">
+                <label for="loginFree" class="loginFree"><input type="checkbox" Id="loginFree">十天内免登录</label>
+                </input>
+            </div>
+        </div>
+    </div>
+    <!-- 视频标题 -->
+    <h1 class="tit"></h1>
+    <!-- 作者栏 -->
+    <div class="writer">
+        <a href="">
+            <!-- 头像 -->
+            <div class="writer_pic">
+                <img src="img/头像.png" alt="">
+            </div>
+            <!-- 作者 -->
+            <div class="writer_name">郭工</div>
+        </a>
+        <!-- 发消息 -->
+        <a href="">
+            <div class="writer_send">发消息</div>
+        </a>
+        <button>+关注</button>
+    </div>
+    <br>
+    <!-- 视频播放器 -->
+    <div id="mse"></div>
+    <script src="//cdn.jsdelivr.net/npm/xgplayer/browser/index.js" charset="utf-8"></script>
+   <script src="./js/xgPlayer.js"></script>
+    <br>
+    <!-- 视频选集 -->
+    <h2 class="video_choice">视频选集</h2>
+    <div class="choice">
+        <div id="choice">
+
+        </div>
+    </div>
+    </br>
+    <div class="syno">
+        <a href="">
+            <div class="like">点赞</div>
+        </a>
+        <a href="">
+            <div class="collection">收藏</div>
+        </a>
+        <a href="">
+            <div class="transmit">转发</div>
+        </a>
+        <br>
+        <br>
+        <div>
+            <h2>简介</h2>
+            <div class="synopsis">
+                素材下载地址： https://gitee.com/xiaoqiang001/html_css_material.git
+                1. web端布局：先讲解HTML5常用标签，接着讲解CSS3常见样式，主要学习盒子模型，浮动，定位还有高级布局技巧，增加的H5C3新特性，新语法，最后讲解PC端品优购项目。以及CSS3动画 2d 3d效果
+                2. 移动端布局：主要讲解视口、二倍图、流失布局，flex布局，rem布局，响应式布局，还会增加摹客使用等工具。
+            </div>
+        </div>
+    </div>
+    <div class="discuss">
+        <h2>讨论区</h2>
+        <div class="discuss_pic">
+            <img src="img/头像.png" alt="">
+        </div>
+        <input type="textarea" rows="10" cols="30">
+        <button>发送讨论</button>
+    </div>
+    <!-- 播放列表 -->
+    <script src="./js/index.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/video.js"></script>
+</body>
+
+</html>
